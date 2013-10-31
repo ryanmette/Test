@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041FB8C4179629EF0053748D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041FB8C3179629EF0053748D /* UIKit.framework */; };
+		041FB8C4179629EF0053748D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041FB8C3179629EF0053748D /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		041FB8C6179629EF0053748D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041FB8C5179629EF0053748D /* Foundation.framework */; };
 		041FB8C8179629EF0053748D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041FB8C7179629EF0053748D /* CoreGraphics.framework */; };
 		041FB8CE179629EF0053748D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 041FB8CC179629EF0053748D /* InfoPlist.strings */; };
@@ -21,6 +21,9 @@
 		041FB8E4179629F00053748D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041FB8C5179629EF0053748D /* Foundation.framework */; };
 		041FB8EC179629F00053748D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 041FB8EA179629F00053748D /* InfoPlist.strings */; };
 		041FB8EF179629F00053748D /* TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 041FB8EE179629F00053748D /* TestTests.m */; };
+		04F282451804C81000C3C090 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F282441804C81000C3C090 /* AudioToolbox.framework */; };
+		04F282471804C81300C3C090 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F282461804C81300C3C090 /* MapKit.framework */; };
+		04F282491804C81500C3C090 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F282481804C81500C3C090 /* PassKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		041FB8EB179629F00053748D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		041FB8ED179629F00053748D /* TestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTests.h; sourceTree = "<group>"; };
 		041FB8EE179629F00053748D /* TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTests.m; sourceTree = "<group>"; };
+		04F282431804C80F00C3C090 /* Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Test.entitlements; sourceTree = "<group>"; };
+		04F282441804C81000C3C090 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		04F282461804C81300C3C090 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		04F282481804C81500C3C090 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +67,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F282491804C81500C3C090 /* PassKit.framework in Frameworks */,
 				041FB8C4179629EF0053748D /* UIKit.framework in Frameworks */,
 				041FB8C6179629EF0053748D /* Foundation.framework in Frameworks */,
+				04F282471804C81300C3C090 /* MapKit.framework in Frameworks */,
 				041FB8C8179629EF0053748D /* CoreGraphics.framework in Frameworks */,
+				04F282451804C81000C3C090 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +111,9 @@
 		041FB8C2179629EF0053748D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04F282481804C81500C3C090 /* PassKit.framework */,
+				04F282461804C81300C3C090 /* MapKit.framework */,
+				04F282441804C81000C3C090 /* AudioToolbox.framework */,
 				041FB8C3179629EF0053748D /* UIKit.framework */,
 				041FB8C5179629EF0053748D /* Foundation.framework */,
 				041FB8C7179629EF0053748D /* CoreGraphics.framework */,
@@ -112,6 +125,7 @@
 		041FB8C9179629EF0053748D /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				04F282431804C80F00C3C090 /* Test.entitlements */,
 				041FB8D2179629EF0053748D /* AppDelegate.h */,
 				041FB8D3179629EF0053748D /* AppDelegate.m */,
 				041FB8CA179629EF0053748D /* Supporting Files */,
@@ -199,6 +213,31 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Ryan Mette";
+				TargetAttributes = {
+					041FB8BF179629EF0053748D = {
+						DevelopmentTeam = 4EGK755NQN;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Passbook = {
+								enabled = 1;
+							};
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 041FB8BB179629EF0053748D /* Build configuration list for PBXProject "Test" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -365,10 +404,15 @@
 		041FB8F3179629F00053748D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Test/Test.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
 				INFOPLIST_FILE = "Test/Test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -376,10 +420,15 @@
 		041FB8F4179629F00053748D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Test/Test.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
 				INFOPLIST_FILE = "Test/Test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -437,6 +486,7 @@
 				041FB8F4179629F00053748D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		041FB8F5179629F00053748D /* Build configuration list for PBXNativeTarget "TestTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +495,7 @@
 				041FB8F7179629F00053748D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
